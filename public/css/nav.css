@@ -1,0 +1,36 @@
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    height: 1px;
+    width: 30px;
+    background-color: #60606e;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.menu-icon .line:nth-child(2) {
+    margin: 7px 0;
+    width: 15px;
+}
+
+.menu-icon .line:last-child {
+    width: 20px;
+}
+
+@media (max-width: 991px) {
+    header.main-header .menu-icon {
+        display: block;
+    }
+
+    .nav__collapse {
+        height: 100%;
+        display: block;
+    }
+}
+
+.nav__collapse {
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
