@@ -1,10 +1,10 @@
 const Posts = require("../models/Posts.js");
 
-exports.index = function (request, response) {
+exports.index = async function (request, response) {
 
-    Posts.find({}).then(posts => {
-        response.render('index', {
-            posts: posts
-        });
+    const posts = await Posts.find({});
+
+    response.render('index', {
+        posts
     });
 };

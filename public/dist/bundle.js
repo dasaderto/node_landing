@@ -97,6 +97,51 @@ eval("(function() {\n  var MutationObserver, Util, WeakMap, getComputedStyle, ge
 
 /***/ }),
 
+/***/ "./public/css/nav.css":
+/*!****************************!*\
+  !*** ./public/css/nav.css ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/css/nav.css?");
+
+/***/ }),
+
+/***/ "./public/css/pepper.css":
+/*!*******************************!*\
+  !*** ./public/css/pepper.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/css/pepper.css?");
+
+/***/ }),
+
+/***/ "./public/css/style.css":
+/*!******************************!*\
+  !*** ./public/css/style.css ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/css/style.css?");
+
+/***/ }),
+
+/***/ "./public/css/styles.js":
+/*!******************************!*\
+  !*** ./public/css/styles.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./public/css/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _pepper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pepper.css */ \"./public/css/pepper.css\");\n/* harmony import */ var _pepper_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_pepper_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _nav_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav.css */ \"./public/css/nav.css\");\n/* harmony import */ var _nav_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nav_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./public/css/styles.js?");
+
+/***/ }),
+
 /***/ "./public/js/script.js":
 /*!*****************************!*\
   !*** ./public/js/script.js ***!
@@ -105,7 +150,7 @@ eval("(function() {\n  var MutationObserver, Util, WeakMap, getComputedStyle, ge
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! wowjs */ \"./node_modules/wowjs/dist/wow.js\");\n/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', function () {\r\n\r\n    'use strict';\r\n\r\n    var slider = Peppermint(document.getElementById('peppermint'));\r\n\r\n    let prev = document.querySelector('.prev'),\r\n        next = document.querySelector('.next');\r\n\r\n    prev.addEventListener('click', function () {\r\n        slider.next();\r\n    });\r\n\r\n    next.addEventListener('click', function () {\r\n        slider.prev();\r\n    });\r\n\r\n    slider.start();\r\n    window.onresize = function (event) {\r\n        slider.recalcWidth();\r\n    };\r\n\r\n    const wow = new wowjs__WEBPACK_IMPORTED_MODULE_0___default.a.WOW({\r\n        live: false\r\n    });\r\n    wow.init();\r\n});\n\n//# sourceURL=webpack:///./public/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! wowjs */ \"./node_modules/wowjs/dist/wow.js\");\n/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconst styles = __webpack_require__(/*! ../css/styles.js */ \"./public/css/styles.js\");\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  'use strict';\n\n  var slider = Peppermint(document.getElementById('peppermint'));\n  let prev = document.querySelector('.prev'),\n      next = document.querySelector('.next');\n  prev.addEventListener('click', function () {\n    slider.next();\n  });\n  next.addEventListener('click', function () {\n    slider.prev();\n  });\n  slider.start();\n\n  window.onresize = function (event) {\n    slider.recalcWidth();\n  };\n\n  const wow = new wowjs__WEBPACK_IMPORTED_MODULE_0___default.a.WOW({\n    live: false\n  });\n  wow.init(); //nav\n\n  let btn = document.querySelector(\".menu-icon\");\n  let collapse = document.querySelector('.nav__collapse');\n  let menu = document.querySelector(\".menu-icon\");\n  let lines = menu.querySelectorAll(\".line\");\n  btn.addEventListener('click', function () {\n    if (collapse.classList.contains(\"show\")) {\n      collapse.classList.remove(\"show\");\n      collapse.style.maxHeight = null;\n      lines[0].style.width = \"30px\";\n      lines[1].style.width = \"15px\";\n      lines[2].style.width = \"20px\";\n    } else {\n      collapse.classList.add(\"show\");\n      collapse.style.maxHeight = collapse.scrollHeight + \"px\";\n      menu.children[0].style.width = \"30px\";\n      menu.children[1].style.width = \"30px\";\n      menu.children[2].style.width = \"30px\";\n    }\n  });\n});\n\n//# sourceURL=webpack:///./public/js/script.js?");
 
 /***/ })
 
