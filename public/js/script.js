@@ -23,9 +23,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slider.recalcWidth();
     };
 
-    const wow = new WOW.WOW({
-        live: false
-    });
+    const wow = new WOW.WOW({});
     wow.init();
 
     //nav

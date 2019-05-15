@@ -20,6 +20,10 @@ header {
   background: #f5f5f5;
 }
 
+section {
+  overflow: hidden;
+}
+
 .header__block {
   padding: 30px 0;
 }
