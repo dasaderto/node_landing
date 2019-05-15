@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     'use strict';
 
+
     var slider = Peppermint(document.getElementById('peppermint'));
 
     let prev = document.querySelector('.prev'),
