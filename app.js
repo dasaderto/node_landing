@@ -1,5 +1,6 @@
 const path = require('path');
 const bodyParser = require("body-parser");
+var favicon = require('serve-favicon');
 const mongoose = require('mongoose');
 const config = require('./config');
 const express = require("express");
@@ -28,7 +29,7 @@ app.use(bodyParser.json());
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(favicon(__dirname + '/favicon.ico'));
 app.use(function (req, res, next) {
     res.status(404).send("Not Found");
 });

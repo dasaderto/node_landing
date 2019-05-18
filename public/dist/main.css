@@ -109,7 +109,6 @@ section {
   font-weight: 800;
   color: #606060;
   text-transform: uppercase;
-
 }
 
 .card__body {
@@ -181,6 +180,7 @@ svg {
   background: #1abb9c;
   fill: #fff;
   cursor: pointer;
+  transition: 1s;
 }
 
 .section__body__item {

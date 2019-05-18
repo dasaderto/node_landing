@@ -19,6 +19,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongoose": "^5.5.5",
+    "serve-favicon": "^2.5.0",
     "static-asset": "^0.6.0",
     "style-loader": "^0.23.1",
     "tiny-slider": "^2.9.2",
